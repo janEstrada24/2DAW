@@ -1,3 +1,103 @@
+<?php 
+    session_start();
+
+    /**
+     * Recollim la data generada
+     */
+    if (isset($_GET['dataAvui'])) {
+        $_SESSION['dataAvui'] = $_GET['dataAvui'];
+    }
+    /**
+     * En cas de que no s'hagi generat cap data,
+     * en generem una
+     */
+    else if (!isset($_SESSION['dataAvui']) || $_SESSION['dataAvui'] != date("Ymd")) {
+
+        if (!isset($_SESSION['dataAvui'])) {
+            $_SESSION['dataAvui'] = date("Ymd");
+        }
+        obtenirLletres();
+    }
+
+    function obtenirLletraAleatoria($alfabet) {
+        $lletraAleatoria = $alfabet[rand(0, strlen($alfabet) - 1)];
+                
+        return $lletraAleatoria;
+    }
+
+    function borrarLletraAlfabet($lletraAleatoria, $alfabet) {
+        return str_replace($lletraAleatoria, '', $alfabet);
+    }
+    
+    function obtenirLletres() {
+        $alfabet = "";
+        $resultat = "";
+        $alfabet = "abcdefghijklmnopqrstuvwxyz";
+        $_SESSION['lletres'] = array();
+
+        $solucions = 0;
+        srand($_SESSION['data']);
+        for ($k = 0; $k < 7; $k++) {
+            $caracter = obtenirLletraAleatoria($alfabet);
+            $alfabet = borrarLletraAlfabet($caracter, $alfabet);
+            array_push($_SESSION['lletres'],$caracter);
+        }
+    }
+
+    function comprovarSolucions() {
+        $arrayFuncions = get_defined_functions();
+
+        $lletra1 = $_SESSION['lletres'][0];
+        $lletra2 = $_SESSION['lletres'][1];
+        $lletra3 = $_SESSION['lletres'][2];
+        $lletra4 = $_SESSION['lletres'][3];
+        $lletra5 = $_SESSION['lletres'][4];
+        $lletra6 = $_SESSION['lletres'][5];
+        $lletra7 = $_SESSION['lletres'][6];
+
+        $requistsFuncio = "/^[$lletra1$lletra2$lletra3$lletra4$lletra5$lletra6$lletra7]+$/";
+        $_SESSION['solucions'][$i] = array();
+        for ($i = 0; $i < count($arrayFuncions); $i++) {
+            $funcio = $arrayFuncions[$i];
+            if (preg_match($requistsFuncio, $funcio)) {
+                $_SESSION['solucions'][$i] = $funcio;
+            }
+        }
+        if (count($_SESSION['solucions']) >= 3) {
+            return $_SESSION['solucions'];
+        }
+    }
+
+    var_dump($_SESSION['lletres']);
+
+    /**
+     * Imprimim les línies del formulari generant lletres aleatories
+     */
+    function imprimirLinies() {
+        $resultat = "";
+        
+        for ($k = 0; $k < count($_SESSION['lletres']); $k++) {
+            
+            if ($k == 3) {
+                /**
+                 * L'hi creem un input per passar-hi per paràmetre 
+                 * la lletra obligatoria
+                 */
+                $resultat .= '<li class="hex">
+                                    <div class="hex-in"><a class="hex-link" data-lletra="' . $_SESSION['lletres'][$k] . '" id="center-letter"><p>' . $_SESSION['lletres'][$k] . '</p></a></div>
+                                    <input type="hidden" name="lletraPrincipal" value="' . $_SESSION['lletres'][$k] . '">
+                            </li>';
+            } 
+            else {
+                $resultat .= '<li class="hex">
+                                <div class="hex-in"><a class="hex-link" data-lletra="' . $_SESSION['lletres'][$k]. '"  draggable="false"><p>' . $_SESSION['lletres'][$k] . '</p></a></div>
+                            </li>';
+            }
+        }
+        
+        return $resultat;
+    }
+?>
 <!DOCTYPE html>
 <html lang="ca">
     <head>
@@ -8,9 +108,11 @@
         <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
         <link href="../css/styles.css" rel="stylesheet">
     </head>
-    <body data-joc="2022-10-07">
-        <form name="phpLogic" class="formJoc" action="../php/process.php" method="post">
+
+    <body >
+        <form name="phpLogic" class="formJoc" action="process.php" method="post">
             <div class="main">
+
                 <h1>
                     <a href=""><img src="../img/logo.png" height="54" class="logo" alt="PHPlògic"></a>
                 </h1>
@@ -21,7 +123,9 @@
                 </div>
                 <div class="container-hexgrid">
                     <ul id="hex-grid">
-                        <?php echo imprimirLinies(); ?>
+                        <?php
+                        echo imprimirLinies();
+                        ?>
                     </ul>
                 </div>
 
@@ -41,78 +145,10 @@
                     </div>
                     <div id="score"></div>
                     <div id="level"></div>
-                </div>
+                </div>`
             </div>
         </form>
-        <?php 
-
-            /**
-             * Obtenim una lletra aleatoria a través de l'alfabet
-             */
-            function obtenirLletraAleatoria($alfabet) {
-
-                $lletraAleatoria = $alfabet[rand(0, strlen($alfabet) - 1)];
-                
-                /**
-                 * Eliminem el caràcter de l'alfabet perquè així no es repeteixi
-                 */
-                str_replace($lletraAleatoria, '', $alfabet);
-                return $lletraAleatoria;
-            }
-
-            
-            /**
-             * Imprimim les línies del formulari generant lletres aleatories
-             */
-            function imprimirLinies() {
-                $alfabet = "";
-                $resultat = "";
-
-                $alfabet = "abcdefghijklmnopqrstuvwxyz";
-                for ($k = 0; $k < 7; $k++) {
-                    $caracter = obtenirLletraAleatoria($alfabet);
-                    /**
-                     * Codifiquem la línia per la lletra obligatoria
-                     */
-                    if ($k == 3) {
-                            $resultat .= '<li class="hex">
-                                                <div class="hex-in"><a class="hex-link" name="lletraPrincipal" data-lletra="' . $caracter. '" id="center-letter"><p>' . $caracter. '</p></a></div>
-                                        </li>';
-                    } 
-                    /**
-                     * Codifiquem la línia per les lletres no obligatories
-                     */
-                    else {
-                            $resultat .= '<li class="hex">
-                                            <div class="hex-in"><a class="hex-link" name="lletra" data-lletra="' . $caracter. '"  draggable="false"><p>' . $caracter. '</p></a></div>
-                                        </li>';
-                    }
-                }
-                return $resultat;
-            }
-
-            /**
-             * Analitzem els errors que ens puguin apareixer
-             */
-            if (isset($_POST['introduir'])) {
-                errors();
-            }
-            function errors() {
-                $arraySolucions = ["rmdir", "strchr"];
-
-                if (isset($_POST['textIntroduit'])) {
-                    $text = $_POST['textIntroduit'];
-                    if (!in_array($text, $arrayFuncions)){
-                        $_POST['textIntroduit'] = "no és una funció";
-                    }
-                } elseif (isset($_POST['textIntroduit']) && isset($_POST['lletraPrincipal']) && !str_contains($_POST['textIntroduit'], $_POST['lletraPrincipal'])) {
-                    $_POST['textIntroduit'] = "falta la lletra del mig";
-                } else {
- 
-                }
-            }
-
-        ?>
+        
 
         <script>
             function amagaError(){
