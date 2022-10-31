@@ -1,44 +1,17 @@
-[
-    {
-        "prova@gmail.com": [
-            "Jan",
-            "prova@gmail.com",
-            "1234"
-        ]
+{
+    "prova@gmail.com": {
+        "correu": "prova@gmail.com",
+        "contrasenya": "1234",
+        "nom": "Jan"
     },
-    {
-        "prova@gmail.com": [
-            "Jan",
-            "prova@gmail.com",
-            "1234"
-        ]
+    "prova312@gmail.com": {
+        "correu": "prova312@gmail.com",
+        "contrasenya": "1234",
+        "nom": "Jan"
     },
-    {
-        "prova@gmail.com": [
-            "Jan",
-            "prova@gmail.com",
-            "1234"
-        ]
-    },
-    {
-        "prova@gmail.com": [
-            "Jan",
-            "prova@gmail.com",
-            "1234"
-        ]
-    },
-    {
-        "prova@gmail.com": [
-            "Jan",
-            "prova@gmail.com",
-            "1234"
-        ]
-    },
-    {
-        "prova@gmail.com": [
-            "Jan",
-            "prova@gmail.com",
-            "1234"
-        ]
+    "prova3@gmail.com": {
+        "correu": "prova3@gmail.com",
+        "contrasenya": "1234",
+        "nom": "Jan2"
     }
-]
+}
