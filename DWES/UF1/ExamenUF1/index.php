@@ -42,6 +42,7 @@
             || $error == "SIGNIN_CORREU_INCORRECTE" 
             || $error == "SIGNIN_CONTRASENYA_INCORRECTE") {
 
+            // Utilitzem el color taronja ja que és el de la secció d'autentificacions
             return 'style="color:#FFFFFF; 
                     background-color:#FF4B2B;
                     border: 1px solid;
@@ -56,6 +57,7 @@
                 || $error == "CREACIO_FALLIDA_NOM_INCORRECTE" 
                 || $error == "CREACIO_FALLIDA" ) {
 
+            // Utilitzem el color magenta ja que és el de la secció de creacio d'usuaris
             return 'style="color:#FFFFFF; 
                     background-color:#FF416C;
                     border: 1px solid;
