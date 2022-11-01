@@ -38,7 +38,7 @@
         $error = mostrarError();
 
         // Estil pels errors relacionats amb l'acces incorrecte
-        if ($error == "USUARI_INEXISTENT" 
+        if ($error == "SIGNIN_USUARI_INEXISTENT" 
             || $error == "SIGNIN_CORREU_INCORRECTE" 
             || $error == "SIGNIN_CONTRASENYA_INCORRECTE") {
 
@@ -51,7 +51,7 @@
         } 
         
         // Estil pels errors relacionats amb la creacio fallida
-        else if($error == "USUARI_EXISTENT"
+        else if($error == "CREACIO_FALLIDA_USUARI_EXISTENT"
                 || $error == "CREACIO_FALLIDA_CORREU_INCORRECTE" 
                 || $error == "CREACIO_FALLIDA_CONTRASENYA_INCORRECTE" 
                 || $error == "CREACIO_FALLIDA_NOM_INCORRECTE" 

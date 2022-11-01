@@ -2,91 +2,55 @@
     {
         "ip": "::1",
         "user": "prova@gmail.com",
-        "time": "2022-11-01 00:02:23",
+        "time": "2022-11-01 21:50:01",
         "status": "signup_correcte"
     },
     {
         "ip": "::1",
         "user": "prova@gmail.com",
-        "time": "2022-11-01 00:02:27",
-        "status": "logoff"
-    },
-    {
-        "ip": "::1",
-        "user": "prova312@gmail.com",
-        "time": "2022-11-01 00:02:32",
-        "status": "usuari_inexistent"
-    },
-    {
-        "ip": "::1",
-        "user": "",
-        "time": "2022-11-01 00:02:36",
-        "status": "creacio_fallida_correu_incorrecte"
-    },
-    {
-        "ip": "::1",
-        "user": "prova312@gmail.com",
-        "time": "2022-11-01 00:02:42",
-        "status": "creacio_fallida_contrasenya_incorrecte"
-    },
-    {
-        "ip": "::1",
-        "user": "prova312@gmail.com",
-        "time": "2022-11-01 00:02:48",
-        "status": "signup_correcte"
-    },
-    {
-        "ip": "::1",
-        "user": "prova312@gmail.com",
-        "time": "2022-11-01 00:03:06",
-        "status": "logoff"
-    },
-    {
-        "ip": "::1",
-        "user": "prova312@gmail.com",
-        "time": "2022-11-01 00:03:09",
-        "status": "signin_correcte"
-    },
-    {
-        "ip": "::1",
-        "user": "prova312@gmail.com",
-        "time": "2022-11-01 00:03:10",
+        "time": "2022-11-01 21:50:06",
         "status": "logoff"
     },
     {
         "ip": "::1",
         "user": "prova@gmail.com",
-        "time": "2022-11-01 00:03:14",
+        "time": "2022-11-01 21:50:14",
+        "status": "creacio_fallida_usuari_existent"
+    },
+    {
+        "ip": "::1",
+        "user": "prova312@gmail.com",
+        "time": "2022-11-01 21:50:40",
+        "status": "signin_contrasenya_incorrecte"
+    },
+    {
+        "ip": "::1",
+        "user": "prova312@gmail.com",
+        "time": "2022-11-01 21:50:47",
+        "status": "signin_usuari_inexistent"
+    },
+    {
+        "ip": "::1",
+        "user": "prova@gmail.com",
+        "time": "2022-11-01 21:50:52",
         "status": "signin_correcte"
     },
     {
         "ip": "::1",
         "user": "prova@gmail.com",
-        "time": "2022-11-01 00:03:17",
+        "time": "2022-11-01 21:51:16",
         "status": "logoff"
-    },
-    {
-        "ip": "::1",
-        "user": "prova312@gmail.com",
-        "time": "2022-11-01 00:03:20",
-        "status": "signin_correcte"
     },
     {
         "ip": "::1",
         "user": "prova3@gmail.com",
-        "time": "2022-11-01 00:04:45",
+        "time": "2022-11-01 21:51:23",
         "status": "signup_correcte"
     },
     {
         "ip": "::1",
-        "user": "",
-        "time": "2022-11-01 00:08:36",
-        "status": "signin_correu_incorrecte"
-    },
-    {
-        "ip": "::1",
-        "user": "",
-        "time": "2022-11-01 00:08:39",
-        "status": "creacio_fallida"
+        "user": "prova3@gmail.com",
+        "time": "2022-11-01 21:51:31",
+        "status": "logoff"
     }
 ]

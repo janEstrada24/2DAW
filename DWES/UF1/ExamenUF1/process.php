@@ -38,7 +38,7 @@
      * @param string $clau
      * @param array $valor
      */
-    function afegirClauIValors(array $array, string $clau, array $valor ): array {
+    function afegirClauIValors(array $array, string $clau, array $valor): array {
 
         $array[$clau] = $valor;
 
@@ -78,11 +78,11 @@
                      * Afegim les dades de les connexions al fitxer JSON
                      * en aquest i els següents condicionals
                      */
-                    $registreConnexio = ["ip" => $_SERVER["REMOTE_ADDR"], "user" => $correu, "time" => date("Y-m-d H:i:s"), "status" => "usuari_existent"];
+                    $registreConnexio = ["ip" => $_SERVER["REMOTE_ADDR"], "user" => $correu, "time" => date("Y-m-d H:i:s"), "status" => "creacio_fallida_usuari_existent"];
                     array_push($dadesConnexions, $registreConnexio);
                     escriu($dadesConnexions, $fitxerJSONConnexions);
 
-                    header('Location: index.php?error=usuari_existent', true, 303);
+                    header('Location: index.php?error=creacio_fallida_usuari_existent', true, 303);
                 } 
 
                 // En cas de que faltin valors per escriure
@@ -187,11 +187,11 @@
 
                     // Condicional per quan intentes inserir un usuari que no existeix
                     else {
-                        $registreConnexio = ["ip" => $_SERVER["REMOTE_ADDR"], "user" => $correu, "time" => date("Y-m-d H:i:s"), "status" => "usuari_inexistent"];
+                        $registreConnexio = ["ip" => $_SERVER["REMOTE_ADDR"], "user" => $correu, "time" => date("Y-m-d H:i:s"), "status" => "signin_usuari_inexistent"];
                         array_push($dadesConnexions, $registreConnexio);
                         escriu($dadesConnexions, $fitxerJSONConnexions);
 
-                        header('Location: index.php?error=usuari_inexistent', true, 303);
+                        header('Location: index.php?error=signin_usuari_inexistent', true, 303);
                     }
         
             }
