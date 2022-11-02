@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factures</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="module" src="../js/processarFactura.js"></script>
+</head>
+
+<body>
+    <p>
+    </p>
+    <br>
+    <label>Article:
+        <select>
+            <option></option>
+        </select>
+    </label>
+    <button>+</button>
+    <br>
+    <table>
+        <tr>
+            <th>Codi</th>
+            <th>Nom</th>
+            <th>Quantitat</th>
+            <th>Preu</th>
+            <th>Total</th>
+        </tr>
+    </table>
+    <br>
+    <table >
+        <tr>
+            <th>Base Imposable</th>
+            <th class="dadesResultants"></th>
+        </tr>
+        <tr>
+            <th>21% IVA</th>
+            <th class="dadesResultants"></th>
+        </tr>
+        <tr>
+            <th>Total</th>
+            <th class="dadesResultants"></th>
+        </tr>
+    </table>
+
+    <label>Codi factura:
+        <input type="text" />
+    </label>
+    <button>Recuperar</button>
+</body>
+
+</html>
