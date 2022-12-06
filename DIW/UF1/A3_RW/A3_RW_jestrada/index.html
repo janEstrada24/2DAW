@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="./bootstrap-5.1.3-examples/assets//dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>E-Renova</title>
+</head>
+<body>
+
+<!--------------------------------BARRA NAVEGACIO-------------------------------->
+    <nav class="navbar navbar-expand-lg bg-primary ">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="./imatges/logoEmpresa.PNG" class="rounded-pill"  alt="logoEmpresa">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link active rounded-pill bg-white text-primary text-center" aria-current="page" href="#">Inici</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-light text-center" href="#">Busquem per tu</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-light text-center" href="#">Ven el teu cotxe</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-light text-center" href="#">Professionals</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-light text-center" href="#">Busca en el mapa</a>
+              </li>
+            </ul>
+            <a class="navbar-brand d-flex justify-content-center" href="./login.html">
+                <img src="./imatges/icona_usuari.png" class="rounded-pill"  alt="logoEmpresa">
+            </a>
+        </div>
+        </div>
+    </nav>
+
+<!--------------------------------FORMULARI CERCA-------------------------------->
+    <div class="caixaFormulari">
+      <div class="row p-5">
+        <h1 class="text-center text-primary">Ven el teu cotxe</h1>
+      </div>
+
+      <div class="row">
+        <div class="row p-5">
+          <div class="col-sm">
+            <form class="m-4">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Marca:</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Escull una marca</option>
+                  <option value="1">BMW</option>
+                  <option value="2">Audi</option>
+                  <option value="3">Mercedes</option>
+                  <option value="4">Peugeot</option>
+                  <option value="5">Volkswagen</option>
+                  <option value="6">Toyota</option>
+                  <option value="7">Ford</option>
+                  <option value="8">Lexus</option>
+                  <option value="9">Porsche</option>
+                  <option value="10">LandRover</option>
+                  <option value="11">Altres</option>
+                </select>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-sm">
+            <form class="m-4">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Model:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escriu un model">
+              </div>
+            </form>
+          </div>
+
+          <div class="col-sm">
+            <form class="m-4">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Preu:</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escriu un preu">
+              </div>
+            </form>
+          </div>
+          
+        </div>
+
+        <div class="column d-flex justify-content-center">
+          <button type="button" class="w-auto mb-5 btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+            Buscar
+          </button>
+        </div>
+      </div>
+    </div>
+
+<!--------------------------------CARTES DE COTXES AMB PREU-------------------------------->
+    <div class="bg-primary p-auto">
+      <div class="p-5 row">
+        <h1 class="text-center text-light">Alguns dels nostres cotxes</h1>
+      </div>
+      <div class="p-5 row">
+        <div class="col-sm mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="./imatges/Audi Q2 1.6tdi Sport Edition 85kw (22.950€).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Audi Q2 1.6tdi Sport Edition 85kw</h5>
+              <p class="card-text">(22.950€)</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="./imatges/Chrysler Le Baron 2.2 Turbo (7.800€).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chrysler Le Baron 2.2 Turbo</h5>
+              <p class="card-text">(7.800€)</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="./imatges/Mercedes Ml 320 320cdi (11.950€).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mercedes Ml 320 320cdi</h5>
+              <p class="card-text">(11.950€)</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm mb-2">
+          <div class="card" style="width: 18rem;">
+            <img src="./imatges/Opel ASTRA GTC SPORT 1.9 CDTI 120 (3.900€).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Opel ASTRA GTC SPORT 1.9 CDTI 120</h5>
+              <p class="card-text">(3.900€)</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--------------------------------LOGOS MARQUES | MAPA CONCESSIONARIS | TAULA DELS MES ENUNCIATS-------------------------------->
+    <div class="p-5 row">
+      <div class="col-sm mb-2">
+        <!--------------------------------CAROUSEL LOGOS MARQUES-------------------------------->
+        <div>
+          <h1 class="text-center text-primary">Algunes Marques</h1>
+
+          <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img class="d-block w-100" style="height: 200px;" src="./imatges/LogoFordFonsTransperent.png" alt="First slide">
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img class="d-block w-100" style="height: 200px;" src="./imatges/LogoPorscheFonsTransparent.png" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" style="height: 200px;" src="./imatges/LogoLandRoverFonsTransperent.png" alt="Third slide">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        <!--------------------------------MAPA CONCESSIONARIS-------------------------------->
+        <div class="mt-5 d-flex justify-content-center flex-column">
+          <h1 class="text-center text-primary">Veure mapa de concessionaris</h1>
+          <img src="./imatges/icona_mapa.png" style="height: 320px;" alt="iconaMapa">
+        </div>
+      </div>
+
+      <!--------------------------------TAULA DELS MES ENUNCIATS-------------------------------->
+      <div class="col-sm mb-2">
+        <table class="table table-dark border-white">
+          <thead>
+            <tr>
+              <th class="bg-primary text-light text-center" scope="col">#</th>
+              <th class="bg-primary text-light text-center" scope="col">Els més anunciats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                <img src="./imatges/LogoBMWRedim.jpg" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="134" aria-valuemin="0" aria-valuemax="839">134</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                  <img src="./imatges/LogoAudiRedim.jpg" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="101" aria-valuemin="0" aria-valuemax="839">101</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                  <img src="./imatges/LogoMercedesRedim.jpg" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="839">99</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                  <img src="./imatges/LogoPeugeotRedim.png" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 78%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="839">89</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                  <img src="./imatges/LogoVolkswagenRedim.jpg" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 63%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="839">66</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">                    
+                <img src="./imatges/LogoToyotaRedim.jpg" class="img-fluid" alt="Responsive image">
+              </th>                
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 62%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="839">65</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">                    
+                  <img src="./imatges/LogoFordFonsTransperentRedim.png" class="img-fluid" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 42%;" aria-valuenow="49" aria-valuemin="0" aria-valuemax="839">49</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                  <img src="./imatges/LogoLexusRedim.jpg" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="46" aria-valuemin="0" aria-valuemax="839">46</div>
+                </div>
+              </td>
+            </tr><tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                  <img src="./imatges/LogoPorscheRedim.jpg" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 36%;" aria-valuenow="41" aria-valuemin="0" aria-valuemax="839">41</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary d-flex justify-content-center" scope="row">
+                  <img src="./imatges/LogoLandRoverFonsTransperentRedim.png" class="rounded" alt="Responsive image">
+              </th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="839">40</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-primary text-light d-flex justify-content-center" scope="row">Altres</th>
+              <td class="bg-light align-middle">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="109" aria-valuemin="0" aria-valuemax="839">109</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th style="color:white; background-color: rgb(0, 153, 153); text-align: center; border: 1px white; border-style: solid;">Total</th>
+              <td style="color:white; background-color: rgb(0, 153, 153); text-align: center; border: 1px white; border-style: solid;">839 cotxes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+<!--------------------------------ULTIMES CERQUES | ÚLTIMES OPINIONS-------------------------------->
+    <div class="p-5 row">
+      <!-----------------------------------ULTIMES CERQUES----------------------------------->
+      <div class="col-sm mb-2 mt-5">
+        <h1 class="text-center text-primary mb-5">Últimes cerques de cotxes d'ocasió</h1>
+        <ul class="list-group">
+          <li class="list-group-item">Bmw 435d (Ceuta)</li>
+          <li class="list-group-item">Suzuki Samurai (Córdoba)</li>
+          <li class="list-group-item">Peugeot 307 (Toledo)</li>
+          <li class="list-group-item">Seat Leon (Barcelona)</li>
+          <li class="list-group-item">Bmw 320 D (León)</li>
+          <li class="list-group-item">Peugeot 808 (Murcia)</li>
+          <li class="list-group-item">Renault Wind (Ceuta)</li>
+          <li class="list-group-item">Bmw 750d (Girona)</li>
+          <li class="list-group-item">Ford Fiesta (Girona)</li>
+          <li class="list-group-item">Honda Hrv (Palencia)</li>
+          <li class="list-group-item">Bmw 325 (Ávila)</li>
+        </ul>
+      </div>
+
+      <!----------------------------------ULTIMES OPINIONS---------------------------------->
+      <div class="col-sm mb-2 mt-5">
+        <h1 class="text-center text-primary mb-5">Últimes opinions de cotxes utilitzats</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Fiat Stilo Buen coche ,motor excelente</h5>
+              <small><img src="./imatges/4estrellesPuntuacio.png" class="img-fluid" alt="4estrelles"></small>
+            </div>
+            <p class="mb-1">Buen coche ,calidad precio ,motor genial y anda muxo</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Mercedes M bluetech 2013 gqsolina</h5>
+              <small><img src="./imatges/5estrellesPuntuacio.png" class="img-fluid" alt="4estrelles"></small>
+            </div>
+            <p class="mb-1">el motor es silencioso, rapido, comodo, muy buena estabilidad</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Peugeot 206 Peugeot 206 1.4 X-LINE 75cv GASOLINA</h5>
+              <small><img src="./imatges/4estrellesPuntuacio.png" class="img-fluid" alt="5estrelles"></small>
+            </div>
+            <p class="mb-1">El cochecito ha ido bien desde que lo compré nuevo en el 2005. Sus achaques principales han sido eléctricos. El ABS también dejó de funcionar. Tiene 1..
+            </p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Fiat Stilo 1.9 jtd racing 120cv</h5>
+              <small><img src="./imatges/4estrellesPuntuacio.png" class="img-fluid" alt="5estrelles"></small>
+            </div>
+            <p class="mb-1">El motor tira como un diablo. Es un pepino de coche.</p>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Peugeot 206 1.4 xr 75 cv</h5>
+              <small><img src="./imatges/4estrellesPuntuacio.png" class="img-fluid" alt="4estrelles"></small>
+            </div>
+            <p class="mb-1">Coche muy ágil para la potencia que tiene motor muy duró</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+<!--------------------------------------------PEU DE PAGINA-------------------------------------------->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 16 16">
+        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+        </symbol>
+    </svg>
+      
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <span class="text-muted">&copy; 2022 Company, Inc</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+        </ul>
+        </footer>
+    </div>
+    
+    <div class="container">
+        <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inici</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Busquem per tu</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Ven el teu cotxe</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Professionals</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Busca en el mapa</a></li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2022 Company, Inc</p>
+        </footer>
+    </div>    
+  
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  
+    
+</body>
+</html>
